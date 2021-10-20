@@ -1,9 +1,3 @@
-"""
-Menu principal
-1 - Criar no momento um menu simples
-2 - Aprimorar a tela de opções"""
-
-
 def multiplos():
     numero = int(input('Informe o número: '))
     mult = int(input('Quantos múltiplos deseja ver? '))
@@ -21,7 +15,7 @@ def multiplos():
 
 def bhaskara():
     while True:
-        print('Calculando as raizes de uma equação de 2º grau\n')
+        print('Calculando as raízes de uma equação de 2º grau\n')
 
         a = float(input('Digite o valor de A: '))
         b = float(input('Digite o valor de B: '))
