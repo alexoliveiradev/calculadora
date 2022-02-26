@@ -54,14 +54,15 @@ def fibonacci():
 
 def entrada(num):
     if num == 1:
-        vezes = int(input('Total de números a serem somados: '))
-        valores = list()
-        for i in range(vezes):
-            x = float(input(f'{i + 1}° número: '))
-            valores.append(x)
-
-        print(f'SOMA DOS NÚMEROS: {valores}')
-        print(f'RESULTADO: {sum(valores)}\n')
+        numeros = list()
+        print("A QUALQUER MOMENTO DIGITE (0) PARA PARAR!")
+        while True:
+            print(f"Total da soma -> {sum(numeros)}")
+            valor = float(input('Número: '))
+            if valor != 0:
+                numeros.append(valor)
+            else:
+                break
 
     elif num == 2:
         vezes = int(input('Total de números a serem subtraidos: '))
@@ -133,7 +134,7 @@ def entrada(num):
         print(f'RESULTADO: {total}\n')
 
     elif num == 6:
-        vezes = int(input('Total de números a serem calculos a raiz quadrada: '))
+        vezes = int(input('Total de números a serem calculados a raiz quadrada: '))
         valores = list()
 
         total = list()
@@ -176,19 +177,7 @@ def menusecund():
         escolha = int(input('Informe sua escolha: '))
         if escolha == 0:
             break
-        elif escolha == 1:
-            entrada(escolha)
-        elif escolha == 2:
-            entrada(escolha)
-        elif escolha == 3:
-            entrada(escolha)
-        elif escolha == 4:
-            entrada(escolha)
-        elif escolha == 5:
-            entrada(escolha)
-        elif escolha == 6:
-            entrada(escolha)
-        elif escolha == 7:
+        else:
             entrada(escolha)
 
 
@@ -227,5 +216,3 @@ while True:
             break
     except ValueError:
         print('Por favor digite um número válido.')
-    except TypeError:
-        pass
