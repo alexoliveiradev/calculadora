@@ -29,7 +29,7 @@ def bhaskara():
         print(f'\nValor de x1: {x1}')
         print(f'Valor de x2: {x2}')
 
-        continua = input('\nDeseja continuar? Digite q ou Enter para um novo cálculo: \n')
+        continua = input("\nDeseja continuar? Digite 'q' ou Enter para um novo cálculo: \n")
         if continua == 'q':
             break
 
@@ -65,20 +65,23 @@ def entrada(num):
                 break
 
     elif num == 2:
-        vezes = int(input('Total de números a serem subtraidos: '))
-        valores = list()
-        for i in range(vezes):
-            x = float(input(f'{i + 1}° número: '))
-            valores.append(x)
-
-        total = float()
-        for i in range(len(valores)):
-            if i == 0:  # Condição para o total não ser negativo sempre
-                total = valores[i]
+        numeros = list()
+        print("A QUALQUER MOMENTO DIGITE (0) PARA PARAR!")
+        while True:
+            x = float(input("Número: "))
+            if x != 0:
+                numeros.append(x)
             else:
-                total -= valores[i]
+                break
 
-        print(f'SUBTRAÇÃO DOS NÚMEROS: {valores}')
+        total = float()  # Caso a variável não fosse declarada anteriormente, geraria um erro.
+        for i in range(len(numeros)):
+            if i == 0:  # Condição para o total não ser negativo sempre
+                total = numeros[i]
+            else:
+                total -= numeros[i]
+
+        print(f'SUBTRAÇÃO DOS NÚMEROS: {numeros}')
         print(f'RESULTADO: {total}\n')
 
     elif num == 3:
