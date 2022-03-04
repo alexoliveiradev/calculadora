@@ -1,10 +1,11 @@
-# Projeto matemático
+# Calculadora
 
-*Projeto feito em Python para realizar algumas operações matemáticas dentre elas:*
-* As quatro operações básicas: soma, subtração, multiplicação e divisão
-* Equação do 2º grau
-* Sequência de Fibonacci
+*Nesse projeto estou trabalhando em algumas funções de uma calculadora usando no momento apenas Python. Essas são algumas dessas funcionalidades:*
+* As quatro operações básicas
+* Exponenciação
+* Raiz quadrada e cúbica
+* Cálculo da fórmula de Bhaskara
+* Múltiplos de um número
 
-__Este projeto será futuramente refatorado usando a programação orientada a objetos (POO).__
 
 ![Python](https://cdn.iconscout.com/icon/free/png-256/python-20-1175115.png)
