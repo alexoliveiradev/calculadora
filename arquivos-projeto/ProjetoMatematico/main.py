@@ -73,8 +73,8 @@ def entrada(num):
                 numeros.append(x)
             else:
                 break
-
-        total = float()  # Caso a variável não fosse declarada anteriormente, geraria um erro.
+    
+        total = 0  # Caso a variável não fosse declarada anteriormente geraria um erro.
         for i in range(len(numeros)):
             if i == 0:  # Condição para o total não ser negativo sempre
                 total = numeros[i]
@@ -94,7 +94,7 @@ def entrada(num):
 
         total = 0
         for num in range(len(valores)):
-            if num == 0:  # Sem esta condição o resultado sempre será 0
+            if num == 0:  # Sem essa condição o resultado sempre será 0
                 total = valores[num]
             else:
                 total *= valores[num]
@@ -103,7 +103,7 @@ def entrada(num):
         print(f'RESULTADO: {total}\n')
 
     elif num == 4:
-        vezes = int(input('Total de números a serem dividos: '))
+        vezes = int(input('Total de números a serem divididos: '))
         valores = list()
 
         for i in range(vezes):
@@ -112,7 +112,7 @@ def entrada(num):
 
         total = 0
         for num in range(len(valores)):
-            if num == 0:  # Esta condição impede que haja a divisão por zero no início
+            if num == 0:  # Essa condição impede que haja a divisão por zero no início
                 total = valores[num]
             else:
                 total /= valores[num]
@@ -152,7 +152,7 @@ def entrada(num):
 
     elif num == 7:
         # Fazer a fatoração
-        vezes = int(input('Total de números a serem calculos a raiz cúbica: '))
+        vezes = int(input('Total de números a serem cálculos a raiz cúbica: '))
         valores = list()
 
         total = list()
@@ -162,11 +162,11 @@ def entrada(num):
             valores.append(x)
             total.append(raiz)
 
-        print(f'RAIZ CÙBICA DOS NÚMEROS: {valores}')
+        print(f'RAIZ CÚBICA DOS NÚMEROS: {valores}')
         print(f'RESULTADO: {total}\n')
 
 
-def menusecund():
+def menusecundario():
     while True:
         print('\nQual das operações matemáticas você deseja fazer?\n'
               '1 - Soma\n'
@@ -184,21 +184,21 @@ def menusecund():
             entrada(escolha)
 
 
-def menuprinc():
+def menuprincipal():
     while True:
-        print('======MENU PRINCIPAL======')
+        print('MENU PRINCIPAL')
         print('1 - Cálculos simples\n'
               '2 - Fórmula de Bhaskara\n'
-              '3 - Múltiplo\n'
+              '3 - Múltiplos\n'
               '4 - Sequência Fibonacci\n'
-              '0 - Fechar Menu')
+              '0 - Sair')
 
         escolha = int(input('\nInforme sua escolha: '))
 
         if escolha == 0:
             break
         elif escolha == 1:
-            menusecund()
+            menusecundario()
         elif escolha == 2:
             bhaskara()
         elif escolha == 3:
@@ -208,14 +208,9 @@ def menuprinc():
         else:
             print('Escolha inválida!')
 
+def bem_vindo():
+    print(f"{'='*5}BEM VINDO A CALCULADORA!{'='*5}\n")
+    menuprincipal()
 
-while True:
-    try:
-        print(f"{'=' * 5}CÁLCULOS MATEMÁTICOS{'=' * 5}")
-        opcao = int(input('1 - Prosseguir\n0 - Finalizar o programa\nSua escolha: '))
-        if opcao == 1:
-            menuprinc()
-        else:
-            break
-    except ValueError:
-        print('Por favor digite um número válido.')
+
+bem_vindo()
