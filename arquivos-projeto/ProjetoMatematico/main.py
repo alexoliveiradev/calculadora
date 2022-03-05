@@ -1,36 +1,30 @@
 def multiplos():
-    numero = int(input('Informe o número: '))
-    mult = int(input('Quantos múltiplos deseja ver? '))
-    total = list()
-    cont = 1
     while True:
-        if len(total) == mult:
+        numero = int(input("Digite um número: "))
+        mult = [numero * i for i in range(11)]  # Começo o range em 0 porque zero é múltiplo de todo número inteiro
+        print(f"Esses são os múltiplos de {numero}:\n{mult}\n")
+        continuar = input("(Enter) para um novo cálculo ou (0) para sair: ")
+        if continuar == '0':
             break
-        else:
-            num = numero * cont
-            total.append(num)
-            cont += 1
-    print(f'Esses são os múltiplos de {numero}:\n{total}')
-
 
 def bhaskara():
+    print('Digite os valores de A, B e C')
     while True:
-        print('Calculando as raízes de uma equação de 2º grau\n')
 
-        a = float(input('Digite o valor de A: '))
-        b = float(input('Digite o valor de B: '))
-        c = float(input('Digite o valor de C: '))
+        a = float(input('A: '))
+        b = float(input('B: '))
+        c = float(input('C: '))
 
         delta = (b ** 2) - (4 * a * c)
 
         x1 = (-b + delta ** (1 / 2)) / (2 * a)
         x2 = (-b - delta ** (1 / 2)) / (2 * a)
 
-        print(f'\nValor de x1: {x1}')
-        print(f'Valor de x2: {x2}')
+        #return f'\nValor de x1: {x1}\nValor de x2: {x2}'
+        print(f'\nValor de x1: {x1}\nValor de x2: {x2}')
 
-        continua = input("\nDeseja continuar? Digite 'q' ou Enter para um novo cálculo: \n")
-        if continua == 'q':
+        continua = input("\n(Enter) para um novo cálculo ou (0) para sair: ")
+        if continua == '0':
             break
 
 
